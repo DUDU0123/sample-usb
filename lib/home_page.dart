@@ -68,6 +68,16 @@ class _HomePageState extends State<HomePage> {
         return;
       }
 
+      // DEBUG: Show all detected devices first
+      for (var d in devices) {
+        debugPrint("Device: ${d.deviceName}, VID: ${d.vid ?? ''}, PID: ${d.pid ?? ''}, Serial: ${d.serial ?? ''}");
+        showSnack(
+          "Device: ${d.deviceName}, VID: ${d.vid} (0x${d.vid?.toRadixString(16)}) | PID: ${d.pid ?? ''} (0x${d.pid?.toRadixString(16)}) | Serial: ${d.serial ?? ''}",
+          color: Colors.orange,
+        );
+        await Future.delayed(const Duration(seconds: 3));
+      }
+
       _port = await devices.first.create();
 
       if (_port == null) {
