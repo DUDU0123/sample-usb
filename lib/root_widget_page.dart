@@ -9,7 +9,7 @@ class RootWidgetPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true),
-      home: MyApp(),
+      home: GpsMonitorPage(),
     );
   }
 }
