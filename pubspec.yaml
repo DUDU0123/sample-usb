@@ -39,6 +39,8 @@ dependencies:
   #   git:
   #     url: https://github.com/Anwar-007/usbserial.git
   usb_serial: ^0.5.2
+  share_plus: ^12.0.1
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:

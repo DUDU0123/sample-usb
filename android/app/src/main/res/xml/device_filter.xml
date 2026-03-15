@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 0x0403 / 0x6001: FTDI FT232R UART -->
+
+    <!-- ── FTDI ──────────────────────────────────────────────────────── -->
+    <!-- 0x0403 / 0x6001 : FTDI FT232R UART -->
     <usb-device vendor-id="1027" product-id="24577" />
 
-    <!-- 0x0403 / 0x6015: FTDI FT231X -->
+    <!-- 0x0403 / 0x6015 : FTDI FT231X -->
     <usb-device vendor-id="1027" product-id="24597" />
 
-    <!-- 0x2341 / Arduino -->
-    <usb-device vendor-id="9025" />
+    <!-- 0x0403 / 0x6010 : FTDI FT2232 (dual-port) -->
+    <usb-device vendor-id="1027" product-id="24592" />
 
-    <!-- 0x16C0 / 0x0483: Teensyduino -->
-    <usb-device vendor-id="5824" product-id="1155" />
-
-    <!-- 0x10C4 / 0xEA60: CP210x UART Bridge -->
+    <!-- ── Silicon Labs CP210x ────────────────────────────────────────── -->
+    <!-- 0x10C4 / 0xEA60 : CP2102 / CP2104 UART Bridge -->
     <usb-device vendor-id="4292" product-id="60000" />
 
-    <!-- 0x067B / 0x2303: Prolific PL2303 -->
-    <usb-device vendor-id="1659" product-id="9123" />
+    <!-- 0x10C4 / 0xEA70 : CP2102N (newer variant) -->
+    <usb-device vendor-id="4292" product-id="60016" />
 
-    <!-- 0x1366 / 0x0105: Segger JLink -->
-    <usb-device vendor-id="4966" product-id="261" />
-
-    <!-- 0x1A86 / 0x7523: CH340 -->
+    <!-- ── WCH CH340 / CH341 ──────────────────────────────────────────── -->
+    <!-- 0x1A86 / 0x7523 : CH340 -->
     <usb-device vendor-id="6790" product-id="29987" />
 
-    <!-- 0x1366 / 0x0105: CH340 JLink -->
-    <usb-device vendor-id="1A86" product-id="7523" />
+    <!-- 0x1A86 / 0x55D3 : CH341 (newer variant, common on cheap GPS modules) -->
+    <usb-device vendor-id="6790" product-id="21971" />
+
+    <!-- ── Prolific PL2303 ────────────────────────────────────────────── -->
+    <!-- 0x067B / 0x2303 : PL2303 USB-Serial  ← was wrong (9123 = 0x23A3) -->
+    <usb-device vendor-id="1659" product-id="8963" />
+
+    <!-- ── Arduino ───────────────────────────────────────────────────── -->
+    <!-- 0x2341 : any Arduino board (all product IDs) -->
+    <usb-device vendor-id="9025" />
+
+    <!-- ── Teensyduino ───────────────────────────────────────────────── -->
+    <!-- 0x16C0 / 0x0483 : Teensyduino virtual serial -->
+    <usb-device vendor-id="5824" product-id="1155" />
+
+    <!-- ── Segger J-Link ─────────────────────────────────────────────── -->
+    <!-- 0x1366 / 0x0105 : Segger J-Link debugger -->
+    <usb-device vendor-id="4966" product-id="261" />
+
+    <!-- ── u-blox ────────────────────────────────────────────────────── -->
+    <!-- 0x1546 / 0x01A7 : u-blox GPS receivers (NEO-6/7/8/M series) -->
+    <usb-device vendor-id="5446" product-id="423" />
+
 </resources>
